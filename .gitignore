@@ -1,0 +1,6 @@
+# Dependencies
+vendor/
+
+# Build
+gen/
+go-ci-sample
