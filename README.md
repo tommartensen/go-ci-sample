@@ -1,5 +1,5 @@
 # Golang Sample Project
-[![Go Report Card](https://goreportcard.com/badge/github.com/tommartensen/go-ci-sample)](https://goreportcard.com/report/github.com/tommartensen/go-ci-sample) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/tommartensen/go-ci-sample)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tommartensen/go-ci-sample)](https://goreportcard.com/report/github.com/tommartensen/go-ci-sample) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/tommartensen/go-ci-sample/blob/master/LICENSE)
 
 |Branch|Build Status|Coverage|
 |------|------------|--------|
