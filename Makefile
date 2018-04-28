@@ -29,7 +29,7 @@ fmt:
 lint:
 	if ! test -f ${GOPATH}/bin/golint; then go get golang.org/x/lint/golint; fi
 	${GOPATH}/bin/golint main.go
-	${GOPATH}/bin/golint pkg/
+	${GOPATH}/bin/golint test/
 
 clean: 
 	rm -r gen vendor

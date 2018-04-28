@@ -6,8 +6,8 @@ import (
 )
 
 func TestStub(t *testing.T) {
-	var a string = "Hello"
-	var b string = "Hello"
+	a := "Hello"
+	b := "Hello"
 
 	assert.Equal(t, a, b, "The two words should be the same.")
 }

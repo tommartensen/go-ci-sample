@@ -14,8 +14,10 @@ script:
   - make lint
   - make test_and_coverage
 
-after_script:
+after_script: 
   - make build
+
+after_success:
   - bash scripts/docker_build_and_push.sh
 
 cache:
