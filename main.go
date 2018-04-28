@@ -12,5 +12,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("Hello " + os.Getenv("HELLO_NAME"))
+	fmt.Println(GetGreeting())
+}
+
+func GetGreeting() string {
+	return "Hello " + os.Getenv("HELLO_NAME")
 }
