@@ -15,6 +15,7 @@ func main() {
 	fmt.Println(GetGreeting())
 }
 
+// GetGreeting assembles greeting string
 func GetGreeting() string {
 	return "Hello " + os.Getenv("HELLO_NAME")
 }
