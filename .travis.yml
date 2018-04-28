@@ -1,3 +1,4 @@
+
 sudo: required
 
 language: go
@@ -12,10 +13,8 @@ install:
 
 script:
   - make lint
-  - make test_and_coverage
-
-after_script: 
   - make build
+  - make test_and_coverage
 
 after_success:
   - bash scripts/docker_build_and_push.sh
