@@ -1,29 +1,29 @@
-
 sudo: required
-
 language: go
 go:
-  - "1.10"
-
+- '1.10'
 services:
-  - docker
-
+- docker
 install:
-  - make install
-
+- make install
 script:
-  - make lint
-  - make build
-  - make test_and_coverage
-
+- make lint
+- make build
+- make test_and_coverage
 after_success:
-  - bash scripts/docker_build_and_push.sh
-
+- bash scripts/docker_build_and_push.sh
 cache:
   directories:
-    - "vendor"
-
+  - vendor
 notifications:
   email:
-    on_success: never
+    on_success: change
     on_failure: change
+  webhooks:
+    urls:
+    - secure:
+        "TlTeplxRIznAJsTKpQIzoRu4tn3qMWq9cO6itBquipzjZPXyCj49ATHOCgzGeelmj/p9+b3Fi+XLVYcwzkKTSLTmlCUVOPDjtNEhshvqS85BjHpQ+hqAa07i65oN1qpOIl7mW8zfnpyzgVdNkUjMiG+URYEzQoHc3XgzbMNjbn2+IVrZKddnBRdFA/WcjwlWPHVVPIv21H+mCzeZx+saMf1aSllyRDe5tHnHE1rByYxUspxlpRHjPXL6TCibHejpQb6o8aGE7xAByi8RlBRGWFvtIdcUm8ExElQO5wZfyTawKZR0+3lz3A2It4jjwq5Syi49cRnLc9sU24h81uJQCJlAuKjlJ89fAPG4MYnNarMM/h1fUwZzzSWxTRMvJawm0NPHpbpKcjc1J/7+HY8eq+6qAKi913fWDNig/S90f/Qe3R7mcz17fSYN+qtPkL+PuDrDw4OVDWubZniuONgJhW0HTpKfyOICkF4YGjlY0UijqkCkh1fvx3zUmqfbLbMTLeD6dsnymaFOFQ/KaUl63GKCpukzzsakgO5MU8om9yxtt3Nvz8varH6NT45N3sUvMhejG8HwrRhsdARPVapXeUAyJ9sK/7H2lZUWprNr/etnOGC1xUhGbrMxiDx+/b3finzet6jt5fl/oNu7s5+9doUFdAqBSfS12QU3dEAp9d4="
+    on_failure: never
+    on_start: never
+    on_cancel: never
+    on_error: never
